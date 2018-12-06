@@ -8,8 +8,6 @@
 </template>
 
 <script>
-
-
     import Header from '../components/Header.vue'
     import CarouselContent from '../components/CarouselContent.vue'
     import Content from '../components/Content.vue'

@@ -6,17 +6,22 @@
         <br />
         <hr />
         <div class="row"
-             :key="experience.name"
+             :key="experience.id"
              v-for='experience in experiences'>
             <div class="four wide column">
                 <img class="company-logo"
                      src="https://picsum.photos/200/200?random"
                      width="50px"
                      height="50px">
-
+                <div>
+                    {{ experience.company }}
+                    <br />
+                    {{ experience.start.format('YYYY-MM-DD') }} - {{ experience.end.format('YYYY-MM-DD') }}
+                </div>
             </div>
             <div class="twelve wide column">
                 <h1>{{ experience.name }}</h1>
+                Duration : {{ experience.end.diff(experience.start, "month") }} months
                 <p>{{ experience.description }}</p>
                 <hr />
             </div>
@@ -33,26 +38,29 @@
                     {
                         "name": "Lead Developer",
                         "company": "Mister Auto",
-                        "start": dayjs.format('2018-01-22'),
-                        "end": dayjs.format('2018-09-28'),
+                        "start": dayjs(new Date(2018, 0, 22)),
+                        "end": dayjs(new Date(2018, 8, 28)),
                         "description": "Such job"
                     },
                     {
                         "name": "Second Exp",
-                        "start": "",
-                        "end": "",
+                        "company": "Mister Auto",
+                        "start": dayjs(new Date(2018,1,22)),
+                        "end": dayjs(new Date(2018,9,28)),
                         "description": "Such job second time u know"
                     },
                     {
                         "name": "Third JobExp",
-                        "start": "",
-                        "end": "",
+                        "company": "Mister Auto",
+                        "start": dayjs(new Date(2018,1,22)),
+                        "end": dayjs(new Date(2018,9,28)),
                         "description": "Wow much amazed"
                     },
                     {
                         "name": "Last exp",
-                        "start": "",
-                        "end": "",
+                        "company": "Mister Auto",
+                        "start": dayjs(new Date(2018,1,22)),
+                        "end": dayjs(new Date(2018,9,28)),
                         "description": "Just before now u know"
                     }
                 ]
