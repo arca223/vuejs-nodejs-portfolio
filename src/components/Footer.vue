@@ -1,5 +1,5 @@
 <template>
-    <div class="row footer">
+    <div class="row ui footer">
         <div>This is my footer</div>
     </div>
 </template>
@@ -12,9 +12,7 @@
 
 <style scoped>
     .footer {
-        background-color: #101010;
         height: 200px;
-        color: white;
         display:flex;
         justify-content:center;
         align-items:center;

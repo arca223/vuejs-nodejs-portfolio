@@ -1,23 +1,25 @@
 <template>
     <div class="row">
         <Header :activeRoute="route"></Header>
-        <Content v-if="defaultViewType" @updateViewType="updateViewType"></Content>
-        <CarouselContent v-else @updateViewType="updateViewType"></CarouselContent>
+        <Experiences v-if="defaultViewType"></Experiences>
+        <CarouselContent v-else ></CarouselContent>
         <Footer></Footer>
     </div>
 </template>
 
 <script>
+    import { EventBus } from "../event-bus.js";
+
     import Header from '../components/Header.vue'
     import CarouselContent from '../components/CarouselContent.vue'
-    import Content from '../components/Content.vue'
+    import Experiences from '../components/Experiences.vue'
     import Footer from '../components/Footer.vue'
 
     export default {
         name: 'home',
         components: {
             Header,
-            Content,
+            Experiences,
             CarouselContent,
             Footer,
         },
@@ -27,10 +29,10 @@
                 "route": "home"
             }
         },
-        methods: {
-            updateViewType: function () {
+        created() {
+            EventBus.$on('updateViewType', () => {
                 return this.defaultViewType = !this.defaultViewType;
-            }
+            });
         }
     }
 </script>

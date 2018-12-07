@@ -1,15 +1,20 @@
 <template>
     <div class="row ui inverted segment">
         <div class="ui inverted secondary pointing menu">
+            <img class="ui small circular image centered"
+                 src="https://picsum.photos/200/200?random"
+                 alt="profile-picture"
+                 onerror="replaceImg(this)"/>
+            <div class="header-title">
+                <div>
+                    <h1>M. Le Coq</h1>
+                </div>
+                <br />
+                <div>
+                    <p>Welcome to my Portfolio, enjoy browsing around!</p>
+                </div>
 
-            <img class="ui small circular image profile-picture"
-                 src="https://picsum.photos/200/200?random"/>
-
-            <h1 class="item header-name">
-                M. Le Coq
-            </h1>
-
-
+            </div>
             <div class="right menu align-vertical">
                 <router-link
                     v-for="link in links"
@@ -55,12 +60,9 @@
 </script>
 
 <style scoped>
-    .profile-picture {
-        margin: 1em 0 0 1em;
-    }
-    .header-name {
-        height: 100px;
-        display: table-cell;
-        vertical-align: middle;
+    .header-title {
+        display: block;
+        text-align: center;
+        padding-top: 2em;
     }
 </style>
