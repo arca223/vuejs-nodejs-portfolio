@@ -1,5 +1,5 @@
 <template>
-    <div class="row wide content">
+    <div class="row wide">
         <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
         <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
         <div class="row">
@@ -23,7 +23,4 @@
 </script>
 
 <style scoped>
-    .content {
-        height: 600px;
-    }
 </style>

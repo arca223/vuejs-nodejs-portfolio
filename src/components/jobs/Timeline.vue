@@ -1,5 +1,5 @@
 <template>
-    <div class="row wide content">
+    <div class="row wide">
         <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
         <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
         <div class="row component">
@@ -23,9 +23,6 @@
 </script>
 
 <style scoped>
-    .content {
-        height: 600px;
-    }
     .component {
         border: solid 2px red; /* temp css : just to diff with Carousel comp */
     }
