@@ -1,6 +1,6 @@
 <template>
-    <div class="row ui footer">
-        <div>This is my footer</div>
+    <div class="row footer-cp">
+        © Maxime Cocquempot 2019
     </div>
 </template>
 
@@ -11,10 +11,11 @@
 </script>
 
 <style scoped>
-    .footer {
-        height: 200px;
+    .footer-cp {
         display:flex;
         justify-content:center;
         align-items:center;
+        margin: 2em 0 0 0;
+        padding-bottom: 2em;
     }
 </style>

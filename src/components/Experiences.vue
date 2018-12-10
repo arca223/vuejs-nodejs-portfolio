@@ -1,6 +1,7 @@
 <template>
     <div class="row wide">
-        <ViewSwitcher></ViewSwitcher>
+        <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
+        <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
         <div class="jobs">
             <div class="row job-tile"
                  :class='index%2 ? "odd" : "even"'
@@ -15,12 +16,17 @@
 <script>
     import ViewSwitcher from "./ViewSwitcher.vue";
     import JobTile from "./JobTile.vue";
+    import SectionTitle from "./SectionTitle.vue";
 
     export default {
         components: {
             ViewSwitcher,
             JobTile,
+            SectionTitle,
         },
+        props: [
+            'selectedView'
+        ],
         data() {
             return {
                 "experiences": [
