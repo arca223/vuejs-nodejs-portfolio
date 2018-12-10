@@ -1,29 +1,22 @@
 <template>
-    <div>
-        <Header :activeRoute="route"></Header>
-        <div class="row">
-            To contact me... Well contact me on LinkedIn.
-            NodeJS Email feature : WIP
-        </div>
-        <Footer></Footer>
+    <div class="row">
+        To contact me... Well contact me on LinkedIn.
+        NodeJS Email feature : WIP
     </div>
 </template>
 
 
 <script>
-    import Header from "../components/Header";
-    import Footer from "../components/Footer";
+    import { EventBus } from "../event-bus";
 
     export default {
-        name: 'contact',
-        components: {
-            Header,
-            Footer,
-        },
-        data() {
+        data: () => {
             return {
                 "route": "contact"
             }
+        },
+        created() {
+            EventBus.$emit('updateRoute', this.route)
         },
     }
 </script>

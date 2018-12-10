@@ -17,12 +17,12 @@
             </div>
             <div class="right menu align-vertical">
                 <router-link
-                    v-for="link in links"
                     :key="link.id"
+                    v-for="link in links"
                     class="item white-tabs"
                     :class='{"active": (activeRoute === link.name)}'
                     :to="link.url">
-                    {{ link.text }}
+                    {{ link.name|capitalize }}
                 </router-link>
 
             </div>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+    import Capitalize from '../../filters/capitalize.js';
+
     export default {
         props: [
             "activeRoute"
@@ -40,21 +42,25 @@
                 links: [
                     {
                         "name": "home",
-                        "text": "Home",
                         "url": "/"
                     },
                     {
+                        "name": "experiences",
+                        "url": "/experiences"
+                    },
+                    {
                         "name": "about",
-                        "text": "About",
                         "url": "/about"
                     },
                     {
                         "name": "contact",
-                        "text": "Contact",
                         "url": "/contact"
                     },
                 ]
             }
+        },
+        filters: {
+            Capitalize,
         }
     }
 </script>

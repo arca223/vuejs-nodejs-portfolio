@@ -10,8 +10,8 @@
 
 
 <script>
-    import ViewSwitcher from "./ViewSwitcher";
-    import SectionTitle from "./SectionTitle";
+    import ViewSwitcher from "../ViewSwitcher";
+    import SectionTitle from "../SectionTitle";
 
     export default {
         props: ['selectedView'],

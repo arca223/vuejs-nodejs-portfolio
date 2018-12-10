@@ -14,9 +14,9 @@
 </template>
 
 <script>
-    import ViewSwitcher from "./ViewSwitcher.vue";
+    import ViewSwitcher from "../ViewSwitcher.vue";
     import JobTile from "./JobTile.vue";
-    import SectionTitle from "./SectionTitle.vue";
+    import SectionTitle from "../SectionTitle.vue";
 
     export default {
         components: {

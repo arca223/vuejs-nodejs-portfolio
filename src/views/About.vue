@@ -1,28 +1,23 @@
 <template>
     <div>
-        <Header :activeRoute="route"></Header>
         <div class="row">
             Hello there, this is my biography ! So basically.. stuff about me I guess
         </div>
-        <Footer></Footer>
     </div>
 </template>
 
 
 <script>
-    import Header from "../components/Header";
-    import Footer from "../components/Footer";
+    import { EventBus } from "../event-bus";
 
     export default {
-        name: 'about',
-        components: {
-            Header,
-            Footer,
-        },
-        data() {
+        data: () => {
             return {
                 "route": "about"
             }
+        },
+        created() {
+            EventBus.$emit('updateRoute', this.route)
         },
     }
 </script>
