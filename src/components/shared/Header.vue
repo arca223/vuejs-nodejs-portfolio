@@ -49,6 +49,10 @@
                         "url": "/experiences"
                     },
                     {
+                        "name": "skills",
+                        "url": "/skills"
+                    },
+                    {
                         "name": "about",
                         "url": "/about"
                     },
