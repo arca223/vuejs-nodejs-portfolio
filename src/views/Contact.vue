@@ -1,5 +1,5 @@
 <template>
-    <div class="row">
+    <div class="row contact">
         To contact me... Well contact me on LinkedIn.
         NodeJS Email feature : WIP
     </div>
@@ -20,3 +20,10 @@
         },
     }
 </script>
+
+<style scoped>
+    .contact {
+        text-align: center;
+        margin: 2em 3em 3em 2em;
+    }
+</style>

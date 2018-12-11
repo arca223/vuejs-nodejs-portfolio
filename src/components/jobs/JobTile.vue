@@ -2,26 +2,22 @@
     <div class="ui padded grid">
         <div class="four wide column companies-tile">
             <div class="row companies-tile-item">
+                <p>Company:</p>
                 {{ experience.company }}
             </div>
             <div class="row companies-tile-item">
-                <img class="ui small circular image centered company-item"
-                     src="https://picsum.photos/200/200?random"
-                     width="50px"
-                     height="50px"
-                     alt="company-logo"
-                     onerror="replaceImg(this)"/>
+                <img class="ui image centered company-logo"
+                     :src="experience.companyLogoSrc"
+                     alt="company-logo"/>
             </div>
             <hr class="companies-tile-separator"/>
             <div class="row companies-tile-item">
-                <img class="ui small circular image centered company-item"
-                      src="https://picsum.photos/200/200?random"
-                      width="50px"
-                      height="50px"
-                      alt="company-logo"
-                      onerror="replaceImg(this)"/>
+                <img class="ui image centered company-logo"
+                      :src="experience.clientLogoSrc"
+                      alt="client-logo"/>
             </div>
             <div class="row companies-tile-item">
+                <p>Client:</p>
                 {{ experience.client }}
             </div>
         </div>
@@ -49,5 +45,9 @@
     }
     .companies-tile-item {
         margin: 1em 0 1em 0;
+    }
+    .company-logo {
+        max-width: 128px;
+        max-height: 128px;
     }
 </style>

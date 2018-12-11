@@ -2,7 +2,7 @@
     <div class="row ui inverted segment">
         <div class="ui inverted secondary pointing menu">
             <img class="ui small circular image centered"
-                 src="https://picsum.photos/200/200?random"
+                 src="../../../public/assets/img/profile-pict-logo.png"
                  alt="profile-picture"
                  onerror="replaceImg(this)"/>
             <div class="header-title">
