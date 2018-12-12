@@ -6,7 +6,7 @@
                     :key="type.id"
                     v-for="type in types"
                     v-if="(selectedView !== type)"
-                    @click='updateViewType(type)'>
+                    @click="updateViewType(type)">
                 {{ type | capitalize }}
             </button>
         </div>
@@ -23,7 +23,7 @@
         props: [
             'selectedView'
         ],
-        data: () => {
+        data() {
             return {
                 types: ['blocks', 'carousel', 'timeline'],
             }
