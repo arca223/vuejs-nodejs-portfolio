@@ -19,7 +19,7 @@
         },
         data: () => {
             return {
-                "activeRoute": "home"
+                activeRoute: "home"
             }
         },
         created() {

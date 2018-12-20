@@ -41,24 +41,24 @@
             return {
                 links: [
                     {
-                        "name": "home",
-                        "url": "/"
+                        name: "home",
+                        url: "/"
                     },
                     {
-                        "name": "experiences",
-                        "url": "/experiences"
+                        name: "experiences",
+                        url: "/experiences"
                     },
                     {
-                        "name": "skills",
-                        "url": "/skills"
+                        name: "skills",
+                        url: "/skills"
                     },
                     {
-                        "name": "about",
-                        "url": "/about"
+                        name: "about",
+                        url: "/about"
                     },
                     {
-                        "name": "contact",
-                        "url": "/contact"
+                        name: "contact",
+                        url: "/contact"
                     },
                 ]
             }

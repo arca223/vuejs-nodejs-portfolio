@@ -14,7 +14,7 @@
     import Skill from './Skill.vue';
 
     export default {
-        "props": [
+        props: [
             "skills"
         ],
         components: {

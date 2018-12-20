@@ -35,19 +35,19 @@
     export default {
         data: () => {
             const myself = {
-                "firstname": "Maxime",
-                "lastname": "Cocquempot",
-                "surname": "Le Coq",
-                "age": 25,
-                "experience": 5
+                firstname: "Maxime",
+                lastname: "Cocquempot",
+                surname: "Le Coq",
+                age: 25,
+                experience: 5
             };
 
             return {
                 myself,
-                "route": "about",
-                "stories": [
+                route: "about",
+                stories: [
                     {
-                        "text": `Hi, I am ${myself.firstname} (${myself.surname}) ${myself.lastname},` +
+                        text: `Hi, I am ${myself.firstname} (${myself.surname}) ${myself.lastname},` +
                             ` my friends often call me Le Coq or Coq (as for "Rooster", of course.. Please. :) ).` +
                             ` I am a ${myself.age}yo French Web Engineer, specialized in PHP/JS Stacks` +
                             ` with ${myself.experience} years experience.<br />` +
@@ -58,10 +58,10 @@
                             ` In the meantime, I am learning new technologies, as VueJS, Docker, NodeJS`+
                             ` and soon Laravel or something else depending my needs and the hype.`
                         ,
-                        "picture": "https://picsum.photos/400/300?1"
+                        picture: "https://picsum.photos/400/300?1"
                     },
                     {
-                        "text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` +
+                        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` +
                             ` Fusce hendrerit lacus aliquet, fringilla elit at, pharetra est.` +
                             ` Suspendisse ut lectus porta, auctor urna id, fermentum purus.` +
                             ` Pellentesque erat erat, semper non ante in, cursus elementum tellus.` +
@@ -79,10 +79,10 @@
                             ` Cras eu bibendum elit. Suspendisse porta ut massa ac pharetra.` +
                             ` Donec malesuada feugiat diam, eget efficitur nisi porta ac.`
                         ,
-                        "picture": "https://picsum.photos/400/300?2"
+                        picture: "https://picsum.photos/400/300?2"
                     },
                     {
-                        "text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` +
+                        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` +
                             ` Fusce hendrerit lacus aliquet, fringilla elit at, pharetra est.` +
                             ` Suspendisse ut lectus porta, auctor urna id, fermentum purus.` +
                             ` Pellentesque erat erat, semper non ante in, cursus elementum tellus.` +
@@ -95,10 +95,10 @@
                             ` Etiam et purus luctus, scelerisque urna egestas, fringilla tellus.` +
                             ` Cras eu bibendum elit. Suspendisse porta ut massa ac pharetra.`
                         ,
-                        "picture": "https://picsum.photos/400/300?3"
+                        picture: "https://picsum.photos/400/300?3"
                     },
                     {
-                        "text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` +
+                        text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` +
                             ` Nulla facilisi. Integer facilisis blandit felis, ut convallis nisl tincidunt sed.` +
                             ` Aliquam eget dui aliquet, volutpat turpis vel, cursus orci.` +
                             ` Suspendisse interdum mauris vitae hendrerit tincidunt.<br /><br />` +
@@ -112,7 +112,7 @@
                             ` Cras eu bibendum elit. Suspendisse porta ut massa ac pharetra.` +
                             ` Donec malesuada feugiat diam, eget efficitur nisi porta ac.`
                         ,
-                        "picture": "https://picsum.photos/400/300?4"
+                        picture: "https://picsum.photos/400/300?4"
                     },
                 ],
 
