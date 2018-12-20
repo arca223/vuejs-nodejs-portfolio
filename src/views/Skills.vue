@@ -80,6 +80,31 @@
                         ],
                     },
                     {
+                        label: "Design skills",
+                        skills: [
+                            {
+                                name: "css",
+                                src: "assets/img/skills/logo-css.png",
+                                stars: 3
+                            },
+                            {
+                                name: "bootstrap",
+                                src: "assets/img/skills/logo-bootstrap.png",
+                                stars: 3
+                            },
+                            {
+                                name: "semantic-ui",
+                                src: "assets/img/skills/logo-semantic-ui.png",
+                                stars: 3
+                            },
+                            {
+                                name: "fontawesome",
+                                src: "assets/img/skills/logo-fontawesome.png",
+                                stars: 3
+                            },
+                        ]
+                    },
+                    {
                         label: "Tools Skills",
                         skills: [
                             {

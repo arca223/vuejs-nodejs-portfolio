@@ -5,7 +5,7 @@
              :alt="skill.name"/>
 
         <div v-if="skill.description">
-            {{ skill.description }}
+            {{ skill.description|capitalize }}
         </div>
         <div class="skill-stars">
             <i class="star icon custom-icon"
@@ -17,10 +17,15 @@
 </template>
 
 <script>
+    import Capitalize from '../../filters/capitalize.js';
+
     export default {
         props: [
             'skill'
-        ]
+        ],
+        filters: {
+            Capitalize,
+        }
     }
 </script>
 
