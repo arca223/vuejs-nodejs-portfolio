@@ -13,7 +13,9 @@
                 <div>
                     <p>Welcome to my Portfolio, enjoy browsing around!</p>
                 </div>
-
+            </div>
+            <div class="social-networks">
+                <a :key="sn.id" v-for="sn in socialNetworks" :href="sn.link" target="_blank"><i :class="sn.icon" class="inverted big icon"></i></a>
             </div>
             <div class="right menu align-vertical">
                 <router-link
@@ -60,7 +62,19 @@
                         name: "contact",
                         url: "/contact"
                     },
-                ]
+                ],
+                socialNetworks: [
+                    {
+                        name: "linkedin",
+                        link: "https://www.linkedin.com/in/maxime-cocquempot-866944b2",
+                        icon: "linkedin",
+                    },
+                    {
+                        name: "github",
+                        link: "https://github.com/arca223",
+                        icon: "github",
+                    },
+                ],
             }
         },
         filters: {
@@ -74,5 +88,18 @@
         display: block;
         text-align: center;
         padding-top: 2em;
+    }
+    .social-networks {
+        position: absolute;
+        float: right;
+        top: 2em;
+        right: 2em;
+    }
+    .icon {
+        opacity: 0.8;
+    }
+    .icon:hover {
+        transform: scale(1.2, 1.2);
+        opacity: 1;
     }
 </style>
