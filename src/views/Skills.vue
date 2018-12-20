@@ -9,19 +9,29 @@
                 I worked with a lot of different stacks,
                 allowing me to succeed in both versatility (different stacks, and specialization (specialized PHP/JS).
             </div>
+            <br />
+            <div class="row">
+                <h1>Technical Skills</h1>
+            </div>
             <div class="row block-skills">
-                <Skill v-for="logo in logos" :logo="logo"></Skill>
+                <Skill :key="skill.id" v-for="skill in techSkills" :skill="skill"></Skill>
+            </div>
+            <div class="row">
+                <h1>Tools Skills</h1>
+            </div>
+            <div class="row block-skills">
+                <Skill :key="tool.id" v-for="tool in tools" :skill="tool"></Skill>
+            </div>
+            <div class="row">
+                <h1>Social and communication skills</h1>
+            </div>
+            <div class="row block-skills">
+                <Skill :key="socialSkill.id" v-for="socialSkill in socialSkills" :skill="socialSkill"></Skill>
             </div>
         </div>
-        <div id="hobbies" class="content transition hidden">
-            <div class="row">
-                I like sports etc..
-                Hobbies WIP !
-                <i class="football ball icon"></i>
-                <i class="music icon"></i>
-                <i class="plane icon"></i>
-            </div>
 
+        <div id="hobbies" class="content transition hidden">
+            <Hobby></Hobby>
         </div>
     </div>
 </template>
@@ -30,15 +40,17 @@
 <script>
     import { EventBus } from "../event-bus";
     import Skill from '../components/skills/Skill';
+    import Hobby from '../components/skills/Hobby';
 
     export default {
         components: {
-            Skill
+            Skill,
+            Hobby,
         },
         data() {
             return {
                 "route": "skills",
-                "logos": [
+                "techSkills": [
                     {
                         "name": "php",
                         "src": "assets/img/skills/logo-php.png",
@@ -62,19 +74,92 @@
                     {
                         "name": "angularjs",
                         "src": "assets/img/skills/logo-angularjs.png",
-                        "stars": 5
+                        "stars": 3
                     },
                     {
                         "name": "docker",
                         "src": "assets/img/skills/logo-docker.png",
-                        "stars": 3
+                        "stars": 4
+                    },
+                    {
+                        "name": "nodejs",
+                        "src": "assets/img/skills/logo-nodejs.png",
+                        "stars": 2
                     },
                     {
                         "name": "nginx",
                         "src": "assets/img/skills/logo-nginx.png",
                         "stars": 3
                     },
-                ]
+                ],
+                "tools": [
+                    {
+                        "name": "circle-ci",
+                        "src": "assets/img/skills/logo-circleci.jpg",
+                        "stars": 3
+                    },
+                    {
+                        "name": "sentry",
+                        "src": "assets/img/skills/logo-sentry.png",
+                        "stars": 4
+                    },
+                    {
+                        "name": "datadog",
+                        "src": "assets/img/skills/logo-datadog.png",
+                        "stars": 4
+                    },
+                    {
+                        "name": "jenkins",
+                        "src": "assets/img/skills/logo-jenkins.svg",
+                        "stars": 3
+                    },
+                    {
+                        "name": "jira",
+                        "src": "assets/img/skills/logo-jira.svg",
+                        "stars": 5
+                    },
+                    {
+                        "name": "git",
+                        "src": "assets/img/skills/logo-git.svg",
+                        "stars": 5
+                    },
+                ],
+                "socialSkills": [
+                    {
+                        "name": "agility",
+                        "src": "assets/img/skills/logo-agility.png",
+                        "stars": 5,
+                    },
+                    {
+                        "name": "meetings",
+                        "src": "assets/img/skills/logo-teamwork.jpg",
+                        "stars": 5,
+                    },
+                    {
+                        "name": "french",
+                        "src": "https://www.countryflags.io/fr/flat/64.png",
+                        "stars": 5,
+                        "label": "native"
+                    },
+                    {
+                        "name": "english",
+                        "src": "https://www.countryflags.io/gb/flat/64.png",
+                        "stars": 5,
+                        "label": "fluent, CAE level C1"
+                    },
+                    {
+                        "name": "japanese",
+                        "src": "https://www.countryflags.io/jp/flat/64.png",
+                        "stars": 2,
+                        "label": "beginner"
+                    },
+                    {
+                        "name": "spanish",
+                        "src": "https://www.countryflags.io/es/flat/64.png",
+                        "stars": 2,
+                        "label": "beginner"
+                    },
+                ],
             }
         },
         methods: {

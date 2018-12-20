@@ -1,13 +1,17 @@
 <template>
     <div class="skill">
         <img class="logo-skill"
-             :src="logo.src"
-             :alt="logo.name"/>
+             :src="skill.src"
+             :alt="skill.name"/>
+
+        <div v-if="skill.label">
+            {{ skill.label }}
+        </div>
         <div class="skill-stars">
             <i class="star icon custom-icon"
-               :key="logo.id"
+               :key="skill.id"
                v-for="i in 5"
-               :class="{'star-full-gold': (i <= logo.stars)}"></i>
+               :class="{'star-full-gold': (i <= skill.stars)}"></i>
         </div>
     </div>
 </template>
@@ -15,7 +19,7 @@
 <script>
     export default {
         props: [
-            'logo'
+            'skill'
         ]
     }
 </script>
@@ -29,14 +33,12 @@
         min-height: 128px;
     }
     .logo-skill {
-        display: block;
-        margin: auto auto 0.5em auto;
-        max-width: 64px;
+        max-width: 80%; /* tweak to adjust landscape pictures */
         max-height: 64px;
     }
     .skill-stars {
         display: block;
-        margin: auto;
+        margin-top: 1em;
     }
     .star-full-gold {
         color: gold!important;
