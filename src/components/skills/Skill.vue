@@ -4,8 +4,8 @@
              :src="skill.src"
              :alt="skill.name"/>
 
-        <div v-if="skill.label">
-            {{ skill.label }}
+        <div v-if="skill.description">
+            {{ skill.description }}
         </div>
         <div class="skill-stars">
             <i class="star icon custom-icon"
