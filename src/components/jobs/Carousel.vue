@@ -3,7 +3,6 @@
         <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
         <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
         <div class="row slider wrapper">
-            <span><i class="huge inverted chevron left icon" @click="slideBack"></i></span>
             <div class="row job-tile"
                  :id="index"
                  :key="experience.id"
@@ -11,7 +10,14 @@
                  :class='(index === 0) ? "transition visible" : "transition hidden"'>
                 <JobTile :experience="experience"></JobTile>
             </div>
+            <span><i class="huge inverted chevron left icon" @click="slideBack"></i></span>
             <span><i class="huge inverted chevron right icon" @click="slideForward"></i></span>
+            <span class="list-icons-wrapper">
+                <i :key="experience.id"
+                   v-for="(experience, index) in experiences"
+                   class="inverted circle icon"
+                   :class='(index === activeTile) ? "" : "outline"' ></i>
+            </span>
         </div>
     </div>
 </template>
@@ -110,6 +116,7 @@
         margin: 2em 3em 2em 3em;
         background-color: #393939;
         padding-right: 1em;
+        padding-bottom: 3em;
     }
     .chevron.icon:hover {
         cursor: pointer;
@@ -129,5 +136,10 @@
     .chevron.icon.right {
         top: 50%;
         right: -0.5em;
+    }
+    .list-icons-wrapper {
+        z-index: 1001;
+        position: absolute;
+        bottom: 2em;
     }
 </style>
