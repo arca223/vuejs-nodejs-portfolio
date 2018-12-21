@@ -88,6 +88,7 @@
                 }
             });
 
+            // Setting the maximum height to each children to avoid having the page resizing and elements moving around
             let maxHeight = 0;
             $('.job-tile').each(function() {
                 $(this).children().each(function(){
