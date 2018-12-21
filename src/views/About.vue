@@ -35,16 +35,7 @@
 
     export default {
         data: () => {
-            const myself = {
-                firstname: "Maxime",
-                lastname: "Cocquempot",
-                surname: "Le Coq",
-                age: 25,
-                experience: 5
-            };
-
             return {
-                myself,
                 route: "about",
                 stories: stories,
             }

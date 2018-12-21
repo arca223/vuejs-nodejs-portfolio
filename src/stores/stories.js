@@ -1,3 +1,11 @@
+const myself = {
+    firstname: "Maxime",
+    lastname: "Cocquempot",
+    surname: "Le Coq",
+    age: 25,
+    experience: 5
+};
+
 export const stories = [
     {
         text: `Hi, I am ${myself.firstname} (${myself.surname}) ${myself.lastname},` +
