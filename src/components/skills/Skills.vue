@@ -14,14 +14,12 @@
     import Skill from './Skill.vue';
 
     export default {
+        props: [
+            'skills'
+        ],
         components: {
             Skill
         },
-        computed: {
-            skills() {
-                return this.$store.state.skills
-            }
-        }
     }
 </script>
 

@@ -36,7 +36,9 @@
 
 <script>
     export default {
-        props: ["experience"],
+        props: [
+            "experience"
+        ],
         methods: {
             getDuration(start, end) {
                 // TODO : Rework to match all cases, full years, year, year and months etc.

@@ -31,13 +31,16 @@
 
 <script>
     import { EventBus } from "../event-bus";
-    import { stories } from "../stores/modules/stories.js";
 
     export default {
         data: () => {
             return {
                 route: "about",
-                stories: stories,
+            }
+        },
+        computed: {
+            stories() {
+                return this.$store.getters.getStories;
             }
         },
         created() {

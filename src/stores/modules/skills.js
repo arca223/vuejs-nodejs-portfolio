@@ -112,11 +112,13 @@ const state = {
                     name: "agility",
                     src: "assets/img/skills/logo-agility.png",
                     stars: 5,
+                    description: "agility method"
                 },
                 {
                     name: "meetings",
                     src: "assets/img/skills/logo-teamwork.jpg",
                     stars: 5,
+                    description: "teamwork and participation"
                 },
                 {
                     name: "french",
@@ -149,11 +151,15 @@ const state = {
 
 
 
-const getters = {};
+const getters = {
+    getSkills: (state) => {
+        return state.skills;
+    }
+};
 const mutations = {};
 const actions = {};
 
-export const skills = {
+export default {
     state,
     getters,
     mutations,

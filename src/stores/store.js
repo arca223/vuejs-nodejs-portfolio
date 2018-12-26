@@ -1,9 +1,9 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import { experiences } from './modules/experiences';
-import { skills } from './modules/skills';
-import { stories } from './modules/stories';
+import experiences from './modules/experiences';
+import skills from './modules/skills';
+import stories from './modules/stories';
 
 Vue.use(Vuex);
 

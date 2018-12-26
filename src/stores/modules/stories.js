@@ -80,11 +80,15 @@ const state = {
 };
 
 
-const getters = {};
+const getters = {
+    getStories: (state) => {
+        return state.stories;
+    }
+};
 const mutations = {};
 const actions = {};
 
-export const stories = {
+export default {
     state,
     getters,
     mutations,

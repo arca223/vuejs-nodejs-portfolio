@@ -6,8 +6,9 @@
         <div id="skills" class="content transition visible">
             <div class="row">
                 Thanks to my different missions,
-                I worked with a lot of different stacks,
-                allowing me to succeed in both versatility (different stacks, and specialization (specialized PHP/JS).
+                I worked with a lot of different stacks and teams,
+                allowing me to succeed in both versatility (different stacks and projects),
+                and specialization (specialized PHP/JS).
             </div>
             <br />
             <Skills :key="skills.id" v-for="skills in mySkills" :skills="skills"></Skills>
@@ -24,7 +25,6 @@
     import { EventBus } from "../event-bus";
     import Skills from '../components/skills/Skills';
     import Hobby from '../components/skills/Hobby';
-    import { skills } from '../stores/modules/skills';
 
     export default {
         components: {
@@ -38,7 +38,7 @@
         },
         computed: {
             mySkills() {
-                return this.$store.state.skills;
+                return this.$store.getters.getSkills;
             }
         },
         methods: {

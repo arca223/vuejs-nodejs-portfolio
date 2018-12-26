@@ -136,11 +136,15 @@ const state = {
     ]
 };
 
-const getters = {};
+const getters = {
+    getExperiences: (state) => {
+        return state.experiences;
+    }
+};
 const mutations = {};
 const actions = {};
 
-export const experiences = {
+export default {
     state,
     getters,
     mutations,

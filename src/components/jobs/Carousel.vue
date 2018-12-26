@@ -51,7 +51,7 @@
         },
         computed: {
             experiences() {
-                return this.$store.state.experiences;
+                return this.$store.getters.getExperiences;
             }
         },
         methods: {
