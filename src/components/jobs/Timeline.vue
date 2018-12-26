@@ -11,8 +11,29 @@
                     <div class="content">
                         <img class="timeline-logo"
                              :src="experience.companyLogoSrc"/>
-                        <h2>{{ experience.start.format('MM-YYYY') }}</h2>
-                        <p v-html="experience.summary"></p>
+                        <div :class='(index%2 === 0) ? "text-left" : "text-right"'>
+                            <h2 class="ui inverted header timeline-tile-header">
+                                {{ experience.start.format('MMM, YYYY') }}
+                            </h2>
+                            <h3 class="ui inverted header timeline-tile-header">
+                                {{ experience.name }}
+                            </h3>
+                        </div>
+                        <div class="ui grid timeline-tile-content">
+                            <div class="six wide column">
+                                <h5 class="ui inverted sub header">topic</h5>
+                                <p v-html="experience.summary.topic"></p>
+                            </div>
+                            <div class="six wide column">
+                                <h5 class="ui inverted sub header">project</h5>
+                                <p v-html="experience.summary.project"></p>
+                            </div>
+                            <div class="four wide column">
+                                <h5 class="ui inverted sub header">stack</h5>
+                                <p v-html="experience.summary.stack"></p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
@@ -136,16 +157,24 @@
         border-radius: 2em;
     }
 
+    .content .timeline-tile-header {
+        margin: 0 0 0.5em 0;
+    }
+
+    .content .timeline-tile-content {
+        margin-top: 0.5em;
+    }
+
     .content h2 {
         margin-top: 0;
     }
 
     /* aligning next to the timeline */
-    .right div[class="content"] {
+    .text-right {
         text-align: left;
     }
 
-    .left div[class="content"] {
+    .text-left {
         text-align: right;
     }
 
