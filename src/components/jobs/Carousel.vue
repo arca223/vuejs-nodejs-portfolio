@@ -34,7 +34,6 @@
     export default {
         props: [
             'selectedView',
-            'experiences'
         ],
         components: {
             ViewSwitcher,
@@ -48,6 +47,11 @@
                 in: null,
                 oldTile: null,
                 sliding: false,
+            }
+        },
+        computed: {
+            experiences() {
+                return this.$store.state.experiences;
             }
         },
         methods: {

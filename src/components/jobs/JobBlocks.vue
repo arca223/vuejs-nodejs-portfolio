@@ -26,8 +26,12 @@
         },
         props: [
             'selectedView',
-            'experiences'
         ],
+        computed: {
+            experiences() {
+                return this.$store.state.experiences;
+            }
+        }
     }
 </script>
 

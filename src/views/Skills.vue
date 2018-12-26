@@ -24,7 +24,7 @@
     import { EventBus } from "../event-bus";
     import Skills from '../components/skills/Skills';
     import Hobby from '../components/skills/Hobby';
-    import { skills } from '../stores/skills';
+    import { skills } from '../stores/modules/skills';
 
     export default {
         components: {
@@ -34,7 +34,11 @@
         data() {
             return {
                 route: "skills",
-                mySkills: skills,
+            }
+        },
+        computed: {
+            mySkills() {
+                return this.$store.state.skills;
             }
         },
         methods: {

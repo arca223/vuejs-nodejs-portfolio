@@ -50,11 +50,15 @@
     export default {
         props: [
             'selectedView',
-            'experiences'
         ],
         components: {
             ViewSwitcher,
             SectionTitle
+        },
+        computed: {
+            experiences() {
+                return this.$store.state.experiences;
+            }
         },
     }
 </script>

@@ -1,14 +1,13 @@
 <template>
     <div class="row">
-        <JobBlocks v-if="selectedView === 'blocks'" :selectedView="selectedView" :experiences="experiences"></JobBlocks>
-        <Carousel v-else-if="selectedView === 'carousel'" :selectedView="selectedView" :experiences="experiences"></Carousel>
-        <Timeline v-else :selectedView="selectedView" :experiences="experiences"></Timeline>
+        <JobBlocks v-if="selectedView === 'blocks'" :selectedView="selectedView"></JobBlocks>
+        <Carousel v-else-if="selectedView === 'carousel'" :selectedView="selectedView"></Carousel>
+        <Timeline v-else :selectedView="selectedView"></Timeline>
     </div>
 </template>
 
 <script>
     import { EventBus } from '../event-bus.js';
-    import { experiences } from '../stores/experiences';
 
     import Header from '../components/shared/Header.vue';
     import Carousel from '../components/jobs/Carousel.vue';
@@ -28,7 +27,6 @@
             return {
                 selectedView: "blocks", //default view set to "block"
                 route: "experiences",
-                experiences: experiences,
             }
         },
         created() {

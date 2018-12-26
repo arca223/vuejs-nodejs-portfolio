@@ -31,7 +31,7 @@
 
 <script>
     import { EventBus } from "../event-bus";
-    import { stories } from "../stores/stories.js";
+    import { stories } from "../stores/modules/stories.js";
 
     export default {
         data: () => {
