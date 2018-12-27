@@ -10,13 +10,13 @@
     import { EventBus } from "../event-bus";
 
     export default {
-        data: () => {
-            return {
-                route: "contact"
-            }
+        computed: {
+            route() {
+                return this.$store.getters.getRoute;
+            },
         },
         created() {
-            EventBus.$emit('updateRoute', this.route)
+            this.$store.commit("setRoute", "contact");
         },
     }
 </script>

@@ -31,12 +31,10 @@
             Skills,
             Hobby,
         },
-        data() {
-            return {
-                route: "skills",
-            }
-        },
         computed: {
+            route() {
+                return this.$store.getters.getRoute;
+            },
             mySkills() {
                 return this.$store.getters.getSkills;
             }
@@ -55,7 +53,7 @@
             }
         },
         created() {
-            EventBus.$emit('updateRoute', this.route);
+            this.$store.commit("setRoute", "skills");
 
             // In case of a double click, it will clear the permanent disabled class without influencing the flow
             setInterval(() => {

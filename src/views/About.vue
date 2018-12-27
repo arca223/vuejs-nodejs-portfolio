@@ -33,18 +33,16 @@
     import { EventBus } from "../event-bus";
 
     export default {
-        data: () => {
-            return {
-                route: "about",
-            }
-        },
         computed: {
+            route() {
+                return this.$store.getters.getRoute;
+            },
             stories() {
                 return this.$store.getters.getStories;
             }
         },
         created() {
-            EventBus.$emit('updateRoute', this.route)
+            this.$store.commit("setRoute", "about");
         },
     }
 </script>

@@ -9,7 +9,6 @@
     export default {
         data: () => {
             return {
-                route: "home",
                 story: "Hello, Welcome to my Portfolio !<br />" +
                     "I took the opportunity as I was looking for a job in Japan" +
                     " to learn some new techs and create this webapp using those new learned skills." +
@@ -17,8 +16,13 @@
                     " Please feel free to roam around to see my work and learn more <a href='/about'>about me</a>."
             }
         },
+        computed: {
+            route() {
+                return this.$store.getters.getRoute;
+            },
+        },
         created() {
-            EventBus.$emit('updateRoute', this.route);
+            this.$store.commit("setRoute", "home");
         },
     }
 </script>

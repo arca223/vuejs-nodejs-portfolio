@@ -8,9 +8,19 @@ import stories from './modules/stories';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    state: {},
-    getters: {},
-    mutations: {},
+    state: {
+        route: "home"
+    },
+    getters: {
+        getRoute: (state) => {
+            return state.route;
+        }
+    },
+    mutations: {
+        setRoute: (state, route) => {
+            state.route = route;
+        }
+    },
     actions: {},
     modules: {
         experiences,

@@ -17,16 +17,11 @@
             Header,
             Footer,
         },
-        data: () => {
-            return {
-                activeRoute: "home"
+        computed: {
+            activeRoute() {
+                return this.$store.getters.getRoute;
             }
-        },
-        created() {
-            EventBus.$on('updateRoute', (route) => {
-                return this.activeRoute = route;
-            });
-        },
+        }
     }
 </script>
 

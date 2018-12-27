@@ -17,20 +17,22 @@
 
     export default {
         components: {
-            Header,
             JobBlocks,
             Carousel,
             Timeline,
-            Footer,
         },
         data() {
             return {
                 selectedView: "blocks", //default view set to "block"
-                route: "experiences",
             }
         },
+        computed: {
+            route() {
+                return this.$store.getters.getRoute;
+            },
+        },
         created() {
-            EventBus.$emit('updateRoute', this.route);
+            this.$store.commit("setRoute", "experiences");
             EventBus.$on('updateViewType', (value) => {
                 return this.selectedView = value;
             });
