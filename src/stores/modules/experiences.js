@@ -1,4 +1,6 @@
 const state = {
+    experienceView: "blocks",
+    experienceSectionTitle: "Professional Background Experiences",
     experiences: [
         {
             name: "Lead Engineer Consultant",
@@ -137,11 +139,21 @@ const state = {
 };
 
 const getters = {
+    getExperienceSectionTitle: (state) => {
+        return state.experienceSectionTitle;
+    },
+    getExperienceView: (state) => {
+        return state.experienceView;
+    },
     getExperiences: (state) => {
         return state.experiences;
     }
 };
-const mutations = {};
+const mutations = {
+    setExperienceView: (state, payload) => {
+        state.experienceView = payload;
+    }
+};
 const actions = {};
 
 export default {

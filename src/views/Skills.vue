@@ -22,7 +22,6 @@
 
 
 <script>
-    import { EventBus } from "../event-bus";
     import Skills from '../components/skills/Skills';
     import Hobby from '../components/skills/Hobby';
 

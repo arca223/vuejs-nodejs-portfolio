@@ -16,21 +16,22 @@
 </template>
 
 <script>
-    import { EventBus } from '../event-bus.js';
     import Capitalize from '../filters/capitalize.js'
 
     export default {
-        props: [
-            'selectedView'
-        ],
         data() {
             return {
                 types: ['blocks', 'carousel', 'timeline'],
             }
         },
+        computed: {
+            selectedView() {
+                return this.$store.getters.getExperienceView;
+            }
+        },
         methods: {
             updateViewType: function(value) {
-                EventBus.$emit('updateViewType', value);
+                this.$store.commit("setExperienceView", value);
             }
         },
         filters: {

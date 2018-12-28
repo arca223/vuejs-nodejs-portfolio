@@ -1,7 +1,7 @@
 <template>
     <div class="row wide">
-        <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
-        <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
+        <SectionTitle :title="sectionTitle"></SectionTitle>
+        <ViewSwitcher></ViewSwitcher>
         <div class="jobs">
             <div class="row job-tile"
                  :class='index%2 ? "odd" : "even"'
@@ -24,10 +24,10 @@
             JobTile,
             SectionTitle,
         },
-        props: [
-            'selectedView',
-        ],
         computed: {
+            sectionTitle() {
+                return this.$store.getters.getExperienceSectionTitle;
+            },
             experiences() {
                 return this.$store.getters.getExperiences;
             }

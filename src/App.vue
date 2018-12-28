@@ -7,7 +7,6 @@
 </template>
 
 <script>
-    import { EventBus } from "./event-bus.js";
     import Header from "./components/shared/Header";
     import Footer from "./components/shared/Footer";
 

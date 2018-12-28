@@ -7,8 +7,6 @@
 
 
 <script>
-    import { EventBus } from "../event-bus";
-
     export default {
         computed: {
             route() {

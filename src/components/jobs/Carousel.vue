@@ -1,7 +1,7 @@
 <template>
     <div class="row wide">
-        <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
-        <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
+        <SectionTitle :title="sectionTitle"></SectionTitle>
+        <ViewSwitcher></ViewSwitcher>
         <div class="row slider wrapper">
             <div class="row job-tile"
                  :id="index"
@@ -32,9 +32,6 @@
     import JobTile from "./JobTile";
 
     export default {
-        props: [
-            'selectedView',
-        ],
         components: {
             ViewSwitcher,
             SectionTitle,
@@ -50,6 +47,9 @@
             }
         },
         computed: {
+            sectionTitle() {
+                return this.$store.getters.getExperienceSectionTitle;
+            },
             experiences() {
                 return this.$store.getters.getExperiences;
             }

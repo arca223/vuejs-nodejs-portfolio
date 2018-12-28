@@ -1,7 +1,7 @@
 <template>
     <div class="row wide">
-        <SectionTitle :title="'Professional Background Experiences'"></SectionTitle>
-        <ViewSwitcher :selectedView="selectedView"></ViewSwitcher>
+        <SectionTitle :title="sectionTitle"></SectionTitle>
+        <ViewSwitcher></ViewSwitcher>
         <div class="segment inverted module">
             <div class="timeline">
                 <div :key="experience.id"
@@ -48,14 +48,14 @@
     import SectionTitle from "../SectionTitle";
 
     export default {
-        props: [
-            'selectedView',
-        ],
         components: {
             ViewSwitcher,
             SectionTitle
         },
         computed: {
+            sectionTitle() {
+                return this.$store.getters.getExperienceSectionTitle;
+            },
             experiences() {
                 return this.$store.getters.getExperiences;
             }
