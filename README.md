@@ -13,12 +13,16 @@ Goal : Node.js server with nginx serving the front
 * Skills
 * About view layout
 * Links to personal pages
-* 
+* Responsive Header
 
 
 ## TODO List
 
 * Home Page
+* All pages Responsive
+  * Job Pages (job tile)
+  * About page
+  * Fix transition skills/hobbies
 * Hobbies
 * Formations
 * About content
