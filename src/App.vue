@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="dimmed pusher">
         <Header :activeRoute="activeRoute"></Header>
         <router-view class="container"></router-view>
         <Footer></Footer>

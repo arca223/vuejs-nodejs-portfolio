@@ -7,7 +7,7 @@
                     v-for="type in types"
                     v-if="(selectedView !== type)"
                     @click="updateViewType(type)">
-                {{ type | capitalize }}
+                {{ type|capitalize }}
             </button>
         </div>
         <br />

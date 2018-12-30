@@ -9,11 +9,51 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        route: "home"
+        route: "home",
+        links: [
+            {
+                name: "home",
+                url: "/"
+            },
+            {
+                name: "experiences",
+                url: "/experiences"
+            },
+            {
+                name: "skills",
+                url: "/skills"
+            },
+            {
+                name: "about",
+                url: "/about"
+            },
+            {
+                name: "contact",
+                url: "/contact"
+            },
+        ],
+        socialNetworks: [
+            {
+                name: "linkedin",
+                link: "https://www.linkedin.com/in/maxime-cocquempot-866944b2",
+                icon: "linkedin",
+            },
+            {
+                name: "github",
+                link: "https://github.com/arca223",
+                icon: "github",
+            },
+        ],
     },
     getters: {
         getRoute: (state) => {
             return state.route;
+        },
+        getLinks: (state) => {
+            return state.links;
+        },
+        getSocialNetworks: (state) => {
+            return state.socialNetworks;
         }
     },
     mutations: {
