@@ -1,13 +1,17 @@
 <template>
     <div class="row contact">
-        To contact me... Well contact me on LinkedIn.
-        NodeJS Email feature : WIP
+        <Email></Email>
     </div>
 </template>
 
 
 <script>
+    import Email from '../components/Email';
+
     export default {
+        components: {
+            Email
+        },
         computed: {
             route() {
                 return this.$store.getters.getRoute;
@@ -21,7 +25,6 @@
 
 <style scoped>
     .contact {
-        text-align: center;
         margin: 2em 3em 3em 2em;
     }
 </style>
