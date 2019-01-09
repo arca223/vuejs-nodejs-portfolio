@@ -14,6 +14,10 @@ Goal : Node.js server with nginx serving the front
 * About view layout
 * Links to personal pages
 * Responsive Header
+* Server Side
+  * Contact view (form w/ NodeJS Server)
+  * MongoDB
+  * NodeJS
 
 
 ## TODO List
@@ -27,9 +31,6 @@ Goal : Node.js server with nginx serving the front
 * Formations
 * About content
 * Server Side
-  * Contact view (form w/ NodeJS Server)
-  * NodeJS
-  * NGinx
   * Docker
 * Vuex state management
 * Vuex to DB on Serverside
