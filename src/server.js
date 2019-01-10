@@ -32,14 +32,12 @@ MongoClient.connect("mongodb://localhost:27017/test", { useNewUrlParser: true },
             if (result.result.ok) {
                 body = {
                     "status": 200,
-                    "message": "Email OK",
-                    "email": result.result
+                    "message": "Email OK"
                 };
             } else {
                 body = {
                     "status": 500,
-                    "message": "Email NOK",
-                    "error": result.result
+                    "message": "Email NOK"
                 }
             }
 

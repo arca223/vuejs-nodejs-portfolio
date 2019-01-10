@@ -32,6 +32,22 @@
                 Send
             </button>
         </form>
+
+        <!-- Email sent notice modal-->
+        <div class="ui basic modal">
+            <div class="ui icon header">
+                <i class="green checkmark icon"></i>
+                Your email <b>{{ topic }}</b> has been sent.
+            </div>
+            <div class="content modal-content">
+                <p>You will soon receive an email informing you that your email was processed to my professional address</p>
+            </div>
+            <div class="actions">
+                <div class="ui green ok inverted button">
+                    Ok
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -63,15 +79,20 @@
                     content: this.content
                 };
 
-                this.$http.post('http://localhost:8080/send-email',
-                    data,
-                    {
-                        headers: {
-                            'Content-type': 'application/json',
-                        }
-                    }).then(response => {
-                        console.log(response.data);
-                        console.log(JSON.parse(response.data.email));
+                this.$http.post('http://localhost:8080/send-email', data, {
+                    headers: {
+                        'Content-type': 'application/json',
+                    }
+                }).then(response => {
+                    switch (response.data.status) {
+                        case 200:
+                            this.clearForm();
+                            $('.ui.basic.modal').modal('show');
+                            break;
+                        default:
+                            alert('error');
+                            break;
+                    }
                 });
             },
             validateForm: function () {
@@ -89,7 +110,16 @@
                 if (!this.submitted) return false;
 
                 return this.errors.find(error => value === error);
+            },
+            clearForm: function () {
+                this.from = "";
+                this.topic = "";
+                this.content = "";
             }
+        },
+        beforeDestroy() {
+            // removing all existing modals to avoid duplication when navigating between components
+            $('body .modals').remove();
         }
     }
 </script>
@@ -98,8 +128,10 @@
     .btn-send{
         z-index: 1;
     }
-
     .label {
         padding-left: 1.15em; /* aligns label with placeholder + text */
+    }
+    .modal-content {
+        text-align: center;
     }
 </style>
