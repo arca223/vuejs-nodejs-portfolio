@@ -25,6 +25,7 @@
 
 <style scoped>
     .contact {
-        margin: 2em 3em 3em 2em;
+        margin: 2em 3em 0 2em;
+        padding-bottom: 3em;
     }
 </style>

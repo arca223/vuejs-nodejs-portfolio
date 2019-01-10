@@ -27,10 +27,12 @@
                 <textarea class="inverted" v-model="content" placeholder="Content..."></textarea>
             </div>
             <div class="ui inverted divider"></div>
-            <button class="ui right labeled icon inverted black button right floated btn-send">
-                <i class="inverted large envelope outline icon"></i>
-                Send
-            </button>
+            <div class="segment btn-wrapper">
+                <button class="ui right labeled icon inverted black button right floated btn-send">
+                    <i class="inverted large envelope outline icon"></i>
+                    Send
+                </button>
+            </div>
         </form>
 
         <!-- Email sent notice modal-->
@@ -73,6 +75,11 @@
                     return;
                 }
 
+                // Set the loader
+                let btn = $('.btn-send>i');
+                btn.removeClass('envelop outline');
+                btn.addClass('loading volleyball ball');
+
                 let data = {
                     from: this.from,
                     topic: this.topic,
@@ -93,6 +100,9 @@
                             alert('error');
                             break;
                     }
+
+                    btn.removeClass('loading volleyball ball');
+                    btn.addClass('envelop outline');
                 });
             },
             validateForm: function () {
@@ -127,6 +137,9 @@
 <style scoped>
     .btn-send{
         z-index: 1;
+    }
+    .btn-wrapper {
+        height: 5em; /* hack to make the container fix and not overlap footer */
     }
     .label {
         padding-left: 1.15em; /* aligns label with placeholder + text */
