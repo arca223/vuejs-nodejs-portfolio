@@ -25,8 +25,8 @@ const state = {
                 fullSummary: "Topic : Mission at client MisterAuto as Listing team Lead Developer<br />" +
                     "Project : Website V2<br />" +
                     "Tech Stack : PHP (ZE), JS (Angular.js / jQuery)",
-                topic: "Mission at client MisterAuto as Listing team Lead Developer",
-                project: "Website V2",
+                topic: "Consulting Lead Developer at MisterAuto",
+                project: "E-Commerce Website V2",
                 stack: "PHP (ZE), JS (Angular.js / jQuery)"
             }
         },
@@ -37,7 +37,7 @@ const state = {
             companyLogoSrc: "assets/img/companies/logo-abbeal.png",
             clientLogoSrc: "assets/img/companies/logo-st.png",
             start: dayjs(new Date(2017, 8, 15)),
-            end: dayjs(new Date(2018, 11, 28)),
+            end: dayjs(new Date(2017, 11, 28)),
             description: "Product Website V2 => approach SaaS as much as possible with SOA<br />" +
                 "The goal was to leave the “unmaintainable custom-made\" from the legacy and make all customers merge on one platform.<br />" +
                 "- Frequent meetings for tech and architectural choices for upcoming features<br />" +
@@ -50,7 +50,7 @@ const state = {
                 fullSummary: "Topic : Mission at client SmartTraffiK<br />" +
                     "Project : SaaS project V2<br />" +
                     "Tech Stack : PHP (Symfony), JS (jQuery)",
-                topic: "Mission at client SmartTraffiK",
+                topic: "Consulting at SmartTraffiK",
                 project: "SaaS project V2",
                 stack: "PHP (Symfony), JS (jQuery)"
             }
@@ -76,8 +76,8 @@ const state = {
                 fullSummary: "Topic : Mission at client Xotelia<br />" +
                     "Project : Take on the project as main developer<br />" +
                     "PHP (Internal Framework + Symfony), JS (jQuery)",
-                topic: "Mission at client Xotelia",
-                project: "Take on the project as main developer",
+                topic: "Consulting at Xotelia",
+                project: "Take on the project as Main developer",
                 stack: "PHP (Internal Framework + Symfony), JS (jQuery)"
             }
         },

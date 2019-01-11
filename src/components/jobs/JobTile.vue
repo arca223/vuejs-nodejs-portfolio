@@ -25,17 +25,23 @@
         </div>
         <div class="twelve wide column">
             <h1>{{ experience.name }}</h1>
-            {{ experience.start.format('YYYY-MM-DD') }} - {{ experience.end.format('YYYY-MM-DD') }}
+            {{ experience.start.format('MMM, YYYY') }} - {{ experience.end.format('MMM, YYYY') }}
             <br />
             Duration : {{ getDuration(experience.start, experience.end) }}
             <br />
             <p class="description" v-html="experience.description"></p>
+            <TileDigestContent class="summary" :experience="experience"></TileDigestContent>
         </div>
     </div>
 </template>
 
 <script>
+    import TileDigestContent from './TileDigestContent';
+
     export default {
+        components: {
+            TileDigestContent,
+        },
         props: [
             "experience"
         ],
@@ -60,5 +66,21 @@
     .company-logo {
         max-width: 128px;
         max-height: 128px;
+    }
+    .summary {
+        margin-top: 1em;
+        display: none;
+    }
+    @media screen and (max-width: 600px){
+        .description {
+            display: none;
+        }
+        .summary {
+            display: block;
+        }
+        .company-logo {
+            max-width: 64px;
+            max-height: 64px;
+        }
     }
 </style>

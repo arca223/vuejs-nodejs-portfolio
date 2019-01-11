@@ -19,21 +19,7 @@
                                 {{ experience.name }}
                             </h3>
                         </div>
-                        <div class="ui grid timeline-tile-content">
-                            <div class="six wide column">
-                                <h5 class="ui inverted sub header">topic</h5>
-                                <p v-html="experience.summary.topic"></p>
-                            </div>
-                            <div class="six wide column">
-                                <h5 class="ui inverted sub header">project</h5>
-                                <p v-html="experience.summary.project"></p>
-                            </div>
-                            <div class="four wide column">
-                                <h5 class="ui inverted sub header">stack</h5>
-                                <p v-html="experience.summary.stack"></p>
-                            </div>
-                        </div>
-
+                        <TileDigestContent :experience="experience"></TileDigestContent>
                     </div>
                 </div>
 
@@ -46,11 +32,13 @@
 <script>
     import ViewSwitcher from "../ViewSwitcher";
     import SectionTitle from "../SectionTitle";
+    import TileDigestContent from "./TileDigestContent";
 
     export default {
         components: {
             ViewSwitcher,
-            SectionTitle
+            SectionTitle,
+            TileDigestContent,
         },
         computed: {
             sectionTitle() {
@@ -198,20 +186,18 @@
         float: right;
     }
 
-    /* Media queries - Responsive timeline on screens less than 600px wide */
+    /* Media queries - Mobile - Responsive timeline on screens less than 600px wide */
     @media screen and (max-width: 600px) {
         /* Place the timelime to the left */
         .timeline::after {
             left: 31px;
         }
-
         /* Full-width containers */
         .container {
             width: 100%;
             padding-left: 70px;
             padding-right: 25px;
         }
-
         /* Make sure that all arrows are pointing leftwards */
         .container::before {
             left: 60px;
@@ -220,14 +206,23 @@
             border-color: transparent #4b4b4b transparent transparent;
         }
 
+        /* Rework all left/right styles to match mobile display, all tiles on right */
         /* Make sure all circles are at the same spot */
         .left::after, .right::after {
             left: 15px;
         }
-
         /* Make all right containers behave like the left ones */
         .right {
             left: 0%;
+        }
+        .text-left,.text-right {
+            text-align: left;
+        }
+        /* unset left set for desktop and set all pictures to right floating*/
+        .timeline-logo {
+            left: unset!important;
+            right: 1em!important;
+            float: right!important;
         }
     }
 
