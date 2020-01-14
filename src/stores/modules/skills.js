@@ -5,42 +5,42 @@ const state = {
             skills: [
                 {
                     name: "php",
-                    src: "assets/img/skills/logo-php.png",
+                    src: "/src/assets/img/skills/logo-php.png",
                     stars: 5
                 },
                 {
                     name: "js",
-                    src: "assets/img/skills/logo-js.png",
+                    src: "/src/assets/img/skills/logo-js.png",
                     stars: 5
                 },
                 {
                     name: "symfony",
-                    src: "assets/img/skills/logo-sf.svg",
+                    src: "/src/assets/img/skills/logo-sf.svg",
                     stars: 4
                 },
                 {
                     name: "vuejs",
-                    src: "assets/img/skills/logo-vuejs.png",
+                    src: "/src/assets/img/skills/logo-vuejs.png",
                     stars: 4
                 },
                 {
                     name: "angularjs",
-                    src: "assets/img/skills/logo-angularjs.png",
+                    src: "/src/assets/img/skills/logo-angularjs.png",
                     stars: 3
                 },
                 {
                     name: "docker",
-                    src: "assets/img/skills/logo-docker.png",
+                    src: "/src/assets/img/skills/logo-docker.png",
                     stars: 4
                 },
                 {
                     name: "nodejs",
-                    src: "assets/img/skills/logo-nodejs.png",
+                    src: "/src/assets/img/skills/logo-nodejs.png",
                     stars: 2
                 },
                 {
                     name: "nginx",
-                    src: "assets/img/skills/logo-nginx.png",
+                    src: "/src/assets/img/skills/logo-nginx.png",
                     stars: 3
                 },
             ],
@@ -50,22 +50,22 @@ const state = {
             skills: [
                 {
                     name: "css",
-                    src: "assets/img/skills/logo-css.png",
+                    src: "/src/assets/img/skills/logo-css.png",
                     stars: 3
                 },
                 {
                     name: "bootstrap",
-                    src: "assets/img/skills/logo-bootstrap.png",
+                    src: "/src/assets/img/skills/logo-bootstrap.png",
                     stars: 3
                 },
                 {
                     name: "semantic-ui",
-                    src: "assets/img/skills/logo-semantic-ui.png",
+                    src: "/src/assets/img/skills/logo-semantic-ui.png",
                     stars: 3
                 },
                 {
                     name: "fontawesome",
-                    src: "assets/img/skills/logo-fontawesome.png",
+                    src: "/src/assets/img/skills/logo-fontawesome.png",
                     stars: 3
                 },
             ]
@@ -75,32 +75,32 @@ const state = {
             skills: [
                 {
                     name: "circle-ci",
-                    src: "assets/img/skills/logo-circleci.jpg",
+                    src: "/src/assets/img/skills/logo-circleci.jpg",
                     stars: 3
                 },
                 {
                     name: "sentry",
-                    src: "assets/img/skills/logo-sentry.png",
+                    src: "/src/assets/img/skills/logo-sentry.png",
                     stars: 4
                 },
                 {
                     name: "datadog",
-                    src: "assets/img/skills/logo-datadog.png",
+                    src: "/src/assets/img/skills/logo-datadog.png",
                     stars: 4
                 },
                 {
                     name: "jenkins",
-                    src: "assets/img/skills/logo-jenkins.svg",
+                    src: "/src/assets/img/skills/logo-jenkins.svg",
                     stars: 3
                 },
                 {
                     name: "jira",
-                    src: "assets/img/skills/logo-jira.svg",
+                    src: "/src/assets/img/skills/logo-jira.svg",
                     stars: 5
                 },
                 {
                     name: "git",
-                    src: "assets/img/skills/logo-git.svg",
+                    src: "/src/assets/img/skills/logo-git.svg",
                     stars: 5
                 },
             ]
@@ -110,13 +110,13 @@ const state = {
             skills: [
                 {
                     name: "agility",
-                    src: "assets/img/skills/logo-agility.png",
+                    src: "/src/assets/img/skills/logo-agility.png",
                     stars: 5,
                     description: "agility method"
                 },
                 {
                     name: "meetings",
-                    src: "assets/img/skills/logo-teamwork.jpg",
+                    src: "/src/assets/img/skills/logo-teamwork.jpg",
                     stars: 5,
                     description: "teamwork and participation"
                 },

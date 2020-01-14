@@ -5,7 +5,7 @@
             <!-- profile picture-->
             <router-link to="/">
                 <img class="ui circular image profile-picture"
-                     src="../../../public/assets/img/profile-pict-logo.png"
+                     src="./profile-pict-logo.png"
                      alt="profile-picture"
                      onerror="replaceImg(this)"/>
             </router-link>
@@ -84,7 +84,7 @@
         },
         methods: {
             displayMenu() {
-                $('.ui.sidebar')
+                document.querySelector('.ui.sidebar')
                     .sidebar('setting', 'transition', 'overlay')
                     .sidebar('toggle');
             },
