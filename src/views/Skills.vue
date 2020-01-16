@@ -40,11 +40,11 @@
         },
         methods: {
             transition() {
-                const elem=$('#transition-switcher');
+                const elem=document.querySelector('#transition-switcher');
                 elem.addClass('disabled');
 
-                let visibleComponent = $('.transition.visible'); 
-                let hiddenComponent = $('.transition.hidden');
+                let visibleComponent = document.querySelector('.transition.visible');
+                let hiddenComponent = document.querySelector('.transition.hidden');
                 visibleComponent.transition('browse left', function () {
                     hiddenComponent.transition('browse');
                     elem.removeClass('disabled');
@@ -56,10 +56,10 @@
 
             // In case of a double click, it will clear the permanent disabled class without influencing the flow
             setInterval(() => {
-                const transitionBtn = $('#transition-switcher');
+                const transitionBtn = document.querySelector('#transition-switcher');
                 if (transitionBtn.hasClass('disabled')) {
                     setTimeout(() => {
-                        $('#transition-switcher').removeClass('disabled');
+                        document.querySelector('#transition-switcher').removeClass('disabled');
                     }, 500);
                 }
             }, 500);

@@ -4,8 +4,7 @@
         <div class="row">
             <button class="ui inverted black button"
                     :key="type.id"
-                    v-for="type in types"
-                    v-if="(selectedView !== type)"
+                    v-for="type in selectedViewTypes"
                     @click="updateViewType(type)">
                 {{ type|capitalize }}
             </button>
@@ -27,6 +26,11 @@
         computed: {
             selectedView() {
                 return this.$store.getters.getExperienceView;
+            },
+            selectedViewTypes() {
+                return this.types.filter(function(type) {
+                    return this.selectedView() !== type;
+                })
             }
         },
         methods: {

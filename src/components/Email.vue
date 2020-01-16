@@ -4,7 +4,7 @@
             <div class="field error" v-if="Object.keys(errors).length">
                 <p>Please correct the following error(s):</p>
                 <ul>
-                    <li v-for="error in errors">Please do not leave blank the field <b>{{ error }}</b>.</li>
+                    <li :key=error v-for="error in errors">Please do not leave blank the field <b>{{ error }}</b>.</li>
                 </ul>
             </div>
             <div class="required field"
@@ -76,7 +76,7 @@
                 }
 
                 // Set the loader
-                let btn = $('.btn-send>i');
+                let btn = document.querySelector('.btn-send>i');
                 btn.removeClass('envelop outline');
                 btn.addClass('loading volleyball ball');
 
@@ -94,7 +94,7 @@
                     switch (response.data.status) {
                         case 200:
                             this.clearForm();
-                            $('.ui.basic.modal').modal('show');
+                            document.querySelector('.ui.basic.modal').modal('show');
                             break;
                         default:
                             alert('error');
@@ -129,7 +129,7 @@
         },
         beforeDestroy() {
             // removing all existing modals to avoid duplication when navigating between components
-            $('body .modals').remove();
+            document.querySelector('body .modals').remove();
         }
     }
 </script>

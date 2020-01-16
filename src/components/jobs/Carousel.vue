@@ -79,8 +79,8 @@
                     return;
                 }
                 this.sliding = true;
-                let visibleComponent = $('.transition.visible');
-                let nextComponent = $(`div.job-tile#${this.activeTile}`);
+                let visibleComponent = document.querySelector('.transition.visible');
+                let nextComponent = document.querySelector(`div.job-tile#${this.activeTile}`);
 
                 visibleComponent.transition(`fade ${this.out}`, function () {
                     nextComponent.transition(`fade ${vm.in}`, function () {
@@ -118,11 +118,11 @@
 
             // Setting the maximum height to each children to avoid having the page resizing and elements moving around
             let maxHeight = 0;
-            $('.job-tile').each(function() {
-                $(this).children().each(function(){
-                    maxHeight = ($(this).height() > maxHeight ? $(this).height() : maxHeight);
+            document.querySelector('.job-tile').each(function() {
+                this.children().each(function(){
+                    maxHeight = (this.height() > maxHeight ? this.height() : maxHeight);
                 });
-                $(this).height(maxHeight).children().height(maxHeight);
+                this.height(maxHeight).children().height(maxHeight);
             });
         }
     }

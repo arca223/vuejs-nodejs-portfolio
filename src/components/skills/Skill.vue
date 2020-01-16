@@ -9,7 +9,7 @@
         </div>
         <div class="skill-stars">
             <i class="star icon custom-icon"
-               :key="skill.id"
+               :key=i
                v-for="i in 5"
                :class="{'star-full-gold': (i <= skill.stars)}"></i>
         </div>

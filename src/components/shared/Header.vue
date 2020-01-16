@@ -5,7 +5,7 @@
             <!-- profile picture-->
             <router-link to="/">
                 <img class="ui circular image profile-picture"
-                     src="./profile-pict-logo.png"
+                     src="./img/profile-pict-logo.png"
                      alt="profile-picture"
                      onerror="replaceImg(this)"/>
             </router-link>

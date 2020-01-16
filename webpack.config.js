@@ -1,9 +1,20 @@
+const HTMLWebpackPlugin = require('html-webpack-plugin');
+const { join } = require('path');
+const { VueLoaderPlugin } = require('vue-loader');
+const { HotModuleReplacementPlugin } = require('webpack');
+
 module.exports = {
-    // This is the "main" file which should include all other modules
-    entry: './src/main.js',
-    // Where should the compiled file go?
+    mode: 'development',
+    entry: join(__dirname, 'main.js'),
     output: {
+        path: join(__dirname, 'dist'),
         filename: 'bundle.js'
+    },
+    devServer: {
+        port: 8000,
+        hot: true,
+        open: true,
+        historyApiFallback: true
     },
     resolve: {
         alias: {
@@ -11,29 +22,43 @@ module.exports = {
         }
     },
     module: {
-        // Special compilation rules
-        loaders: [
+        rules: [
             {
-                // Ask webpack to check: If this file ends with .js, then apply some transforms
                 test: /\.js$/,
-                // Transform it with babel
+                exclude: /node_modules/,
                 loader: 'babel-loader',
-                // don't transform node_modules folder (which don't need to be compiled)
-                exclude: /node_modules/
+                options: {
+                    presets: ['@babel/preset-env']
+                }
             },
             {
-                // Ask webpack to check: If this file ends with .vue, then apply some transforms
                 test: /\.vue$/,
-                // don't transform node_modules folder (which don't need to be compiled)
-                exclude: /(node_modules|bower_components)/,
-                // Transform it with vue
-                use: {
-                    loader: 'vue-loader'
-                }
+                exclude: /node_modules/,
+                loader: 'vue-loader',
+            },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                exclude: /node_modules/,
+                loader: 'file-loader',
+            },
+            {
+                test: /\.css$/,
+                exclude: /node_modules/,
+                use: [
+                    'vue-style-loader',
+                    'css-loader',
+                ]
             }
         ]
     },
-    devServer: {
-        port: 3000
-    }
+    plugins: [
+        new HotModuleReplacementPlugin(),
+        new VueLoaderPlugin(),
+        new HTMLWebpackPlugin({
+            showErrors: true,
+            cache: true,
+            title: 'Portfolio VueJS',
+            template: join(__dirname, 'index.html')
+        })
+    ]
 }
